@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>67 Records Aufnahme</title>
+        <link rel="stylesheet" href="galerieCSS.css">
+    </head>
+    <body>
+        <section>
+            <header>
+                <a href="#"><img src="67Logo.png" class="logo"></a>
+                <div class="toggle" onclick="toggleMenu();"></div>
+                <ul class="navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="termin.html">Aufnahmetermin</a></li>
+                    <li><a href="#">Beat-Galerie</a></li>
+                    <li><a href="hörprobe.html">Hörproben</a></li>
+                </ul>
+            </header>
+        </section>
+        <div id="image">
+            <img src="galerieSplash.jpg" alt="Aufnahmestudio Bild">
+        </div>
+        <div id="main">
+            <h2 id="titlePage">Beat Galerie</h2>
+            <p id="sammlungText">Hier finden Sie eine ausgewählte Sammlung unserer verfügbaren Beats.</p>
+            <div class="iframe-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZuXK70swQ-w" frameborder="0" allow="autoplay;
+                encrypted-media" allowfullscreen></iframe>
+            </div>
+            <div class="iframe-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/LvEVHVJNb7k" frameborder="0" allow="autoplay;
+                encrypted-media" allowfullscreen></iframe>
+            </div>
+            <div class="iframe-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/liabQ6bamhA" frameborder="0" allow="autoplay;
+                encrypted-media" allowfullscreen></iframe>
+            </div>  
+            <div class="iframe-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/zwcq3jVO0E4" frameborder="0" allow="autoplay;
+                encrypted-media" allowfullscreen></iframe>
+            </div>  
+            <div class="iframe-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/RkR923HnF_Y" frameborder="0" allow="autoplay;
+                encrypted-media" allowfullscreen></iframe>
+            </div>  
+            <div class="iframe-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Ym6p2UQp8WI" frameborder="0" allow="autoplay;
+                encrypted-media" allowfullscreen></iframe>
+            </div>  
+            <div class="iframe-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/O5yqi8gLCu8" frameborder="0" allow="autoplay;
+                encrypted-media" allowfullscreen></iframe>
+            </div>             
+        </div>
+        
+        <div id="footer">
+            Copyright 2021 | TT Entertainment
+        </div>
+        <script type="text/javascript">
+            function toggleMenu(){
+                var menuToggle = document.querySelector('.toggle');
+                var navigation = document.querySelector('.navigation');
+                menuToggle.classList.toggle('active');
+                navigation.classList.toggle('active');
+            }
+        </script>
+    </body>
+</html>

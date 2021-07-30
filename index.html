@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>67 Records Landing Page</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <section>
+            <div class="circle"></div>
+            <header>
+                <a href="#"><img src="67Logo.png" class="logo"></a>
+                <div class="toggle" onclick="toggleMenu();"></div>
+                <ul class="navigation">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="termin.html">Aufnahmetermin</a></li>
+                    <li><a href="galerie.html">Beat-Galerie</a></li>
+                    <li><a href="hörprobe.html">Hörproben</a></li>
+                </ul>
+            </header>
+            <div class="content">
+                <div class="textBox">
+                    <h2>It's not just Music<br>It's <span id="spanTitle">67 Records</span></h2>
+                    <p id="67Text">Sicher dir noch heute einen Termin und besuche unser 67Records Studio für deine perfekte Aufnahme</p>
+                    <a href="#" id="buttonCol">Learn More</a>
+                </div>
+                <div class="imgBox">
+                    <img src="mic.png" class="preview">
+                </div>
+            </div>
+            <ul class="thumb">
+                <li><img src="thumbMic.png" onclick="imgSlider('mic.png');changeCircleColor(1)"></li>
+                <li><img src="thumbWave.png" onclick="imgSlider('wave.png');changeCircleColor(2)"></li>
+                <li><img src="thumbHeadset.png" onclick="imgSlider('headset.png');changeCircleColor(3)"></li>
+            </ul>
+            <ul class="sci">
+                <li><a href="#"><img src="facebook.png"></a></li>
+                <li><a href="https://www.youtube.com/channel/UCbz3K_ndH6K7_QH6SxqVOeQ"><img src="youtube.png"></a></li>
+                <li><a href="https://instagram.com/67beatzz?utm_medium=copy_link"><img src="instagram.png"></a></li>
+            </ul>
+        </section>
+        <script type="text/javascript">
+            function imgSlider(anything){
+                document.querySelector('.preview').src = anything;
+            }
+
+            function changeCircleColor(color){
+                const circle = document.querySelector('.circle');
+                const spanText = document.getElementById("spanTitle");
+                const colorButton = document.getElementById("buttonCol");
+                const displayText = document.getElementById("67Text");
+                const socialMediaBox = document.querySelector('.sci');
+                selectedColor = "#24a4ff";
+                
+                if(color < 2){
+                    selectedColor = "#24a4ff";
+                    displayText.innerHTML = "Sicher dir noch heute einen Termin und besuche unser 67Records Studio für deine perfekte Aufnahme!";
+                } else if(color < 3){
+                    selectedColor = "#8bb819";
+                    displayText.innerHTML = "Wir haben eine breite Auswahl an Beats, schau doch mal in der Beat-Galerie vorbei!";
+                } else if(color < 4){
+                    selectedColor = "#d752b1";
+                    displayText.innerHTML = "Überzeuge dich von unserer Qualität und genieße unsere Hörproben!";
+                }
+                socialMediaBox.style.background = selectedColor;
+                circle.style.background = selectedColor;
+                spanText.style.color = selectedColor;
+                colorButton.style.background = selectedColor;
+            }
+
+            function toggleMenu(){
+                var menuToggle = document.querySelector('.toggle');
+                var navigation = document.querySelector('.navigation');
+                menuToggle.classList.toggle('active');
+                navigation.classList.toggle('active');
+            }
+        </script>
+    </body>
+</html>
