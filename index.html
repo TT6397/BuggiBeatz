@@ -23,7 +23,7 @@
                 <div class="textBox">
                     <h2>It's not just Music<br>It's <span id="spanTitle">67 Records</span></h2>
                     <p id="67Text">Sicher dir noch heute einen Termin und besuche unser 67Records Studio für deine perfekte Aufnahme</p>
-                    <a href="#" id="buttonCol">Learn More</a>
+                    <a href="termin.html" id="buttonCol">Learn More</a>
                 </div>
                 <div class="imgBox">
                     <img src="mic.png" class="preview">
@@ -48,19 +48,22 @@
             function changeCircleColor(color){
                 const circle = document.querySelector('.circle');
                 const spanText = document.getElementById("spanTitle");
-                const colorButton = document.getElementById("buttonCol");
+                var colorButton = document.getElementById("buttonCol");
                 const displayText = document.getElementById("67Text");
                 const socialMediaBox = document.querySelector('.sci');
                 selectedColor = "#24a4ff";
                 
                 if(color < 2){
                     selectedColor = "#24a4ff";
+                    colorButton.setAttribute('href', "termin.html");
                     displayText.innerHTML = "Sicher dir noch heute einen Termin und besuche unser 67Records Studio für deine perfekte Aufnahme!";
                 } else if(color < 3){
                     selectedColor = "#8bb819";
+                    colorButton.setAttribute('href', "galerie.html");
                     displayText.innerHTML = "Wir haben eine breite Auswahl an Beats, schau doch mal in der Beat-Galerie vorbei!";
                 } else if(color < 4){
                     selectedColor = "#d752b1";
+                    colorButton.setAttribute('href', "hörprobe.html");
                     displayText.innerHTML = "Überzeuge dich von unserer Qualität und genieße unsere Hörproben!";
                 }
                 socialMediaBox.style.background = selectedColor;
